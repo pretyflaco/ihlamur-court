@@ -19,7 +19,15 @@
   <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
     <span class="lang-tr">EN</span><span class="lang-en">TR</span>
   </button>
+  <button id="music-toggle" class="music-toggle" type="button" aria-pressed="false" aria-label="Play music">
+    <span class="music-icon" aria-hidden="true">&#9654;</span>
+    <span class="music-label">
+      <span class="lang-tr">Müzik</span><span class="lang-en">Music</span>
+    </span>
+  </button>
+  <audio id="bg-music" loop preload="none" src="assets/audio/til-infinity.mp3"></audio>
   {{ content }}
   <script src="assets/js/lang.js"></script>
+  <script src="assets/js/music.js"></script>
 </body>
 </html>

@@ -45,6 +45,31 @@ body {
 .lang-toggle:hover { transform: translateY(-1px); background: var(--clay-soft); }
 .lang-toggle:active { transform: translateY(0); }
 
+/* ---- music toggle ---- */
+.music-toggle {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font: 800 .85rem/1 "Inter", sans-serif;
+  letter-spacing: .05em;
+  color: var(--paper);
+  background: var(--court);
+  border: 2px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+  padding: .55rem .95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  transition: transform .15s ease, background .15s ease;
+}
+.music-toggle:hover { transform: translateY(-1px); }
+.music-toggle:active { transform: translateY(0); }
+.music-toggle.is-playing { background: var(--clay); }
+.music-icon { font-size: .8rem; line-height: 1; }
+
 /* ---- hero ---- */
 .hero {
   min-height: 92vh;
