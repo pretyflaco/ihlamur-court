@@ -4,3 +4,7 @@ _site/
 .bundle/
 vendor/
 Gemfile.lock
+
+# raw camera originals (processed copies live in assets/)
+/20260905_*.mp4
+/photo_2026-09-05_*.jpg

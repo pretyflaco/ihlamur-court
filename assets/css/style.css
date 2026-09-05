@@ -72,15 +72,30 @@ body {
 
 /* ---- hero ---- */
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 92vh;
   display: flex;
   align-items: flex-end;
-  background-size: cover;
-  background-position: center;
   color: var(--paper);
   padding: 2rem 1.5rem 3.5rem;
+  background: var(--court-deep);
 }
-.hero-inner { max-width: 60rem; margin: 0 auto; width: 100%; }
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(rgba(12,24,18,.45), rgba(12,24,18,.8));
+}
+.hero-inner { position: relative; z-index: 2; max-width: 60rem; margin: 0 auto; width: 100%; }
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: .28em;
@@ -188,6 +203,28 @@ blockquote {
   position: absolute;
   left: 0;
   color: var(--clay);
+}
+
+/* ---- gallery ---- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+.gallery-item {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  background: var(--court-deep);
+}
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vw, 400px);
+  object-fit: cover;
 }
 
 /* ---- figure ---- */
