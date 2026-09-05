@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/court-wide.png">
+  <meta name="theme-color" content="#1b3a2b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+    <span class="lang-tr">EN</span><span class="lang-en">TR</span>
+  </button>
+  {{ content }}
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
