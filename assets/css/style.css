@@ -119,49 +119,6 @@ body {
 .section p { font-size: 1.08rem; margin: 0 0 1rem; }
 .lead { font-size: 1.2rem; font-weight: 600; }
 
-/* ---- cards ---- */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.25rem;
-}
-.card {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  border-radius: 14px;
-  padding: 1.5rem;
-}
-.card h3 {
-  font-size: 1.25rem;
-  margin: 0 0 .6rem;
-  color: #fff;
-}
-.card p { font-size: .98rem; margin: 0; color: var(--sand); }
-
-/* ---- cure ---- */
-.cure { display: grid; gap: 1.5rem; margin: 2rem 0; }
-.cure-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.25rem;
-  align-items: start;
-}
-.cure-num {
-  font-family: "Anton", sans-serif;
-  font-size: 2.6rem;
-  line-height: 1;
-  color: var(--paper);
-  background: var(--clay);
-  width: 4.2rem;
-  height: 4.2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  flex-shrink: 0;
-}
-.cure-item h3 { margin: 0 0 .4rem; font-size: 1.3rem; }
-.cure-item p { margin: 0; }
-
 blockquote {
   margin: 2rem 0 0;
   padding: 1.5rem 1.75rem;

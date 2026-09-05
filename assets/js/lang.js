@@ -8,11 +8,10 @@
     try { localStorage.setItem(KEY, lang); } catch (e) {}
   }
 
-  // initial: saved choice > browser language > Turkish default
+  // initial: saved choice, otherwise always Turkish
   var saved;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
-  var initial = saved || ((navigator.language || "tr").toLowerCase().indexOf("tr") === 0 ? "tr" : "en");
-  apply(initial);
+  apply(saved === "en" ? "en" : "tr");
 
   var btn = document.getElementById("lang-toggle");
   if (btn) {
