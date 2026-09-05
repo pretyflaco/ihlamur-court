@@ -22,28 +22,60 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---- language toggle ---- */
-:root[data-lang="tr"] .lang-en { display: none; }
-:root[data-lang="en"] .lang-tr { display: none; }
+/* ---- language show/hide (5 languages) ---- */
+.lang-tr, .lang-en, .lang-ru, .lang-fr, .lang-fa { display: none; }
+:root[data-lang="tr"] .lang-tr,
+:root[data-lang="en"] .lang-en,
+:root[data-lang="ru"] .lang-ru,
+:root[data-lang="fr"] .lang-fr,
+:root[data-lang="fa"] .lang-fa { display: revert; }
 
-.lang-toggle {
+/* ---- language switch (segmented) ---- */
+.lang-switch {
   position: fixed;
   top: 1rem;
   right: 1rem;
   z-index: 50;
-  font: 800 .85rem/1 "Inter", sans-serif;
-  letter-spacing: .05em;
-  color: var(--paper);
-  background: var(--clay);
-  border: 2px solid rgba(255,255,255,.35);
+  display: flex;
+  gap: 2px;
+  background: rgba(12,24,18,.55);
+  border: 1px solid rgba(255,255,255,.28);
   border-radius: 999px;
-  padding: .55rem .95rem;
-  cursor: pointer;
+  padding: 3px;
   box-shadow: 0 4px 14px rgba(0,0,0,.25);
-  transition: transform .15s ease, background .15s ease;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
-.lang-toggle:hover { transform: translateY(-1px); background: var(--clay-soft); }
-.lang-toggle:active { transform: translateY(0); }
+.lang-switch button {
+  font: 800 .72rem/1 "Inter", sans-serif;
+  letter-spacing: .04em;
+  color: var(--paper);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: .4rem .55rem;
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+.lang-switch button:hover { background: rgba(255,255,255,.14); }
+.lang-switch button.is-active { background: var(--clay); color: #fff; }
+
+/* ---- per-language typography ---- */
+:root[data-lang="ru"] .hero h1,
+:root[data-lang="ru"] .section h2,
+:root[data-lang="ru"] .cta-line { font-family: "Oswald", "Anton", sans-serif; font-weight: 700; }
+
+:root[data-lang="fa"] body { font-family: "Vazirmatn", "Inter", sans-serif; }
+:root[data-lang="fa"] .hero h1,
+:root[data-lang="fa"] .section h2,
+:root[data-lang="fa"] .cta-line,
+:root[data-lang="fa"] .rules li::before { font-family: "Vazirmatn", sans-serif; }
+:root[data-lang="fa"] .hero h1,
+:root[data-lang="fa"] .section h2,
+:root[data-lang="fa"] .cta-line,
+:root[data-lang="fa"] .tagline { letter-spacing: 0; }
+/* Persian-digit list markers in RTL */
+:root[data-lang="fa"] .rules li::before { content: counter(r, arabic-indic); }
 
 /* ---- music toggle ---- */
 .music-toggle {
@@ -192,14 +224,14 @@ body {
   flex-shrink: 0;
 }
 .code-list li {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
   position: relative;
   font-size: 1.08rem;
 }
 .code-list li::before {
   content: "●";
   position: absolute;
-  left: 0;
+  inset-inline-start: 0;
   color: var(--clay);
 }
 
