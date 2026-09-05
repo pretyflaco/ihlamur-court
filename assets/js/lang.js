@@ -1,7 +1,7 @@
 (function () {
   var root = document.documentElement;
   var KEY = "ihlamur-lang";
-  var LANGS = ["tr", "en", "ru", "fr", "fa"];
+  var LANGS = ["tr", "en", "ru", "fr", "fa", "es", "it"];
   var RTL = { fa: true };
 
   var buttons = {};
