@@ -1,7 +1,7 @@
-# İhlamur Saha Manifestosu / The İhlamur Court Manifesto
+# Ihlamur Saha Manifestosu / The Ihlamur Court Manifesto
 
 Bilingual (TR/EN) manifesto for the daily pickup basketball game at the
-İhlamur Sitesi park court, Fulya–Şişli, Istanbul.
+Ihlamur Sitesi park court, Fulya–Şişli, Istanbul.
 
 Static single-page site built with Jekyll (GitHub Pages native build, no plugins).
 
